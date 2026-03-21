@@ -45,7 +45,24 @@ function setupPagination() {
     prevBtn.addEventListener('click', goToPreviousPage);
     nextBtn.addEventListener('click', goToNextPage);
 
+    // Setup card click handlers
+    setupCardNavigation();
+
     updatePageDisplay();
+}
+
+// Setup Card Navigation
+function setupCardNavigation() {
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach((card, index) => {
+        card.addEventListener('click', function() {
+            // Card indices: 0 = page-1, 1 = page-2, 2 = page-3
+            currentPageIndex = index + 1;
+            updatePageDisplay();
+            window.scrollTo(0, 0);
+        });
+    });
 }
 
 // Go to Home Page
