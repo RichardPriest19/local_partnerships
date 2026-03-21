@@ -403,7 +403,52 @@ html, body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* Large Desktop (1200px and above) */
+@media (min-width: 1200px) {
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tablet and Small Desktop (769px to 1199px) */
+@media (max-width: 1199px) and (min-width: 769px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .page h2 {
+        font-size: 2rem;
+    }
+
+    .page h3 {
+        font-size: 1.3rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+    }
+
+    .page-inner {
+        padding: 1.2rem 1.5rem;
+    }
+}
+
+/* Medium Tablet (481px to 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
     .logo {
         font-size: 1.8rem;
     }
@@ -412,61 +457,109 @@ html, body {
         font-size: 1rem;
     }
 
+    .attribution {
+        font-size: 0.8rem;
+    }
+
     .page-inner {
-        padding: 1.5rem;
+        padding: 1.2rem;
     }
 
     .page h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+        padding-bottom: 0.4rem;
     }
 
     .page h3 {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
+        margin-top: 0.8rem;
     }
 
     .main-content {
-        padding: 1.5rem 1rem;
+        padding: 1.2rem 1rem;
     }
 
     .cards-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 0.8rem 0;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+    }
+
+    .card::before {
+        font-size: 60px;
+    }
+
+    .intro-text {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
     }
 
     .pagination {
-        gap: 1rem;
-        flex-direction: column;
+        gap: 0.8rem;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .nav-btn {
-        width: 100%;
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
     }
 
     .chart-container {
-        padding: 1.5rem;
-        margin: 1.5rem 0;
+        padding: 1.2rem;
+        margin: 1.2rem 0;
+    }
+
+    .home-footer {
+        font-size: 0.9rem;
+        margin-top: 0.6rem;
     }
 }
 
+/* Mobile (480px and below) */
 @media (max-width: 480px) {
     .header {
-        padding: 2rem 1rem;
+        padding: 1.2rem 1rem;
     }
 
     .logo {
         font-size: 1.5rem;
+        margin-bottom: 0.2rem;
     }
 
     .tagline {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .attribution {
+        font-size: 0.75rem;
+        margin-top: 0.3rem;
     }
 
     .page h2 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.3rem;
     }
 
     .page h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-top: 0.7rem;
+        margin-bottom: 0.4rem;
     }
 
     .page-inner {
@@ -478,26 +571,76 @@ html, body {
         padding: 1rem;
     }
 
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        margin: 0.6rem 0;
+    }
+
     .card {
-        padding: 1.5rem;
+        padding: 1rem;
+    }
+
+    .card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .card p {
+        font-size: 0.75rem;
+    }
+
+    .card::before {
+        font-size: 50px;
+        top: -5px;
+        right: -10px;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
     }
 
     .page-indicator {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .nav-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
     }
 
-    /* Floating button for mobile */
+    .chart-container {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    .home-footer {
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+    }
+
+    .home-qr-code {
+        bottom: -120px;
+        right: 15px;
+    }
+
+    .qr-code-home {
+        width: 80px;
+        height: 80px;
+    }
+
     .floating-return-to-top {
         width: 45px;
         height: 45px;
         bottom: 20px;
         right: 20px;
         font-size: 20px;
+    }
+
+    .home-link-btn {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
     }
 }
 
