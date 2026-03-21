@@ -6,7 +6,8 @@ const pages = [
     { id: 'page-home', title: 'Home', index: 0 },
     { id: 'page-1', title: 'Business Needs & Roadmap', index: 1 },
     { id: 'page-2', title: 'Systems & Suppliers', index: 2 },
-    { id: 'page-3', title: 'Staff Adoption', index: 3 }
+    { id: 'page-3', title: 'Staff Adoption', index: 3 },
+    { id: 'page-4', title: 'AI and Productivity', index: 4 }
 ];
 
 let currentPageIndex = 0;
@@ -57,7 +58,7 @@ function setupCardNavigation() {
     
     cards.forEach((card, index) => {
         card.addEventListener('click', function() {
-            // Card indices: 0 = page-1, 1 = page-2, 2 = page-3
+            // Card indices: 0 = page-1, 1 = page-2, 2 = page-3, 3 = page-4
             currentPageIndex = index + 1;
             updatePageDisplay();
             window.scrollTo(0, 0);
@@ -115,7 +116,7 @@ function updatePageIndicator() {
     const totalPagesSpan = document.getElementById('total-pages');
 
     currentPageSpan.textContent = pages[currentPageIndex].title;
-    totalPagesSpan.textContent = pages.length + ' Pages';
+    totalPagesSpan.textContent = (pages.length - 1) + ' Pages';
 }
 
 // Update Button States
