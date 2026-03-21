@@ -1,0 +1,454 @@
+/* Professional Business Technology Strategy Website */
+/* Colour Scheme: Professional Blue Palette */
+
+:root {
+    --primary-blue: #001a3d;
+    --secondary-blue: #002855;
+    --light-blue: #003d7a;
+    --accent-blue: #004a99;
+    --dark-blue: #000d1f;
+    --text-dark: #ffffff;
+    --text-light: #ffffff;
+    --border-color: #002855;
+    --hover-blue: #00365c;
+    --chart-blue-1: #002855;
+    --chart-blue-2: #003d7a;
+    --chart-blue-3: #004a99;
+    --chart-blue-4: #0055b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #001a3d;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #001a3d;
+}
+
+/* Header */
+.header {
+    background: #000d1f;
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-bottom: 3px solid #003d7a;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+    letter-spacing: 0.3px;
+}
+
+.attribution {
+    font-size: 0.95rem;
+    font-weight: 400;
+    opacity: 0.85;
+    margin-top: 0.8rem;
+    letter-spacing: 0.2px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-inner {
+    background: #002855;
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.page h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #004a99;
+    padding-bottom: 1rem;
+}
+
+.page h3 {
+    color: #99ccff;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.page p {
+    color: #e6f2ff;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.page ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.page li {
+    margin-bottom: 0.6rem;
+    color: #e6f2ff;
+}
+
+/* Home Page Cards */
+.intro-text {
+    font-size: 1.2rem;
+    color: #99ccff;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.card {
+    background: #003d7a;
+    border: 2px solid #004a99;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    border-color: #0055b3;
+    background: #004a99;
+}
+
+.card h3 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+.card p {
+    color: #b3d9ff;
+    font-size: 0.95rem;
+    text-align: center;
+    margin: 0;
+}
+
+.home-footer {
+    text-align: center;
+    color: #99ccff;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 2rem;
+}
+
+/* Charts */
+.chart-container {
+    background: #003d7a;
+    border: 2px solid #004a99;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.chart-container canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Key Insight Box */
+.key-insight {
+    background: #003d7a;
+    color: var(--text-light);
+    border-left: 5px solid #0055b3;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-top: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.key-insight p {
+    color: #e6f2ff;
+    text-align: left;
+    margin: 0;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #002855;
+    border-top: 2px solid #004a99;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background: #003d7a;
+    color: var(--text-light);
+    border: 2px solid #004a99;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.nav-btn:hover {
+    background: #004a99;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.nav-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.page-indicator {
+    color: #99ccff;
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.divider {
+    margin: 0 0.5rem;
+    color: #004a99;
+}
+
+/* Footer */
+.footer {
+    background: #000d1f;
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 2px solid #003d7a;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Floating Return to Top Button */
+.floating-return-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #004a99;
+    color: #ffffff;
+    border: 2px solid #0055b3;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-return-to-top:hover {
+    background: #0055b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+}
+
+.floating-return-to-top:active {
+    transform: translateY(-1px);
+}
+
+.floating-return-to-top.show {
+    display: flex;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .page-inner {
+        padding: 1.5rem;
+    }
+
+    .page h2 {
+        font-size: 1.6rem;
+    }
+
+    .page h3 {
+        font-size: 1.2rem;
+    }
+
+    .main-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .pagination {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .nav-btn {
+        width: 100%;
+    }
+
+    .chart-container {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 2rem 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+
+    .page h2 {
+        font-size: 1.4rem;
+    }
+
+    .page h3 {
+        font-size: 1.1rem;
+    }
+
+    .page-inner {
+        padding: 1rem;
+        border-radius: 6px;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .page-indicator {
+        font-size: 0.9rem;
+    }
+
+    .nav-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Floating button for mobile */
+    .floating-return-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 20px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header, .pagination, .footer, .floating-return-to-top {
+        display: none;
+    }
+
+    .page-inner {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    .page {
+        page-break-after: always;
+    }
+}
