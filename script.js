@@ -350,7 +350,7 @@ function drawEfficiencyChart() {
 
     // Title
     ctx.fillStyle = '#99ccff';
-    ctx.font = 'bold 13px Arial';
+    ctx.font = 'bold 15px Arial';
     ctx.textAlign = 'left';
     ctx.fillText('Efficiency Improvement (%)', 15, 25);
 
@@ -383,7 +383,7 @@ function drawEfficiencyChart() {
 
         // Category label
         ctx.fillStyle = '#ffffff';
-        ctx.font = 'bold 11px Arial';
+        ctx.font = 'bold 13px Arial';
         ctx.textAlign = 'center';
         
         // Handle multi-line labels
@@ -397,7 +397,7 @@ function drawEfficiencyChart() {
     const legendX = width - 180;
     const legendY = 35;
     
-    ctx.font = '12px Arial';
+    ctx.font = '13px Arial';
     
     // Before legend
     ctx.fillStyle = '#00d4ff';
